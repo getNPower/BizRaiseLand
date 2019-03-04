@@ -1,0 +1,32 @@
+<div id="nav-logo" class="nav-logo">
+  <a href="/"><img src="../assets/img/newlogobizraise.png"></a>
+</div>
+<div id="nav-trigger" class="nav-trigger open" (click)="open()">
+  <span class="navline"></span>
+  <span class="navline"></span>
+  <span class="navline"></span>
+</div>
+<object class="background-svg b-rotation"
+        type="image/svg+xml"
+        data="../assets/img/rotation-light.svg"
+        id="rotation_light"
+        *ngIf="router.url !== '/'"
+
+        style="z-index: -100; position: absolute; top: 0; right: 0;">
+  Your browser does not support SVGs
+</object>
+<nav id="nav" class="out">
+  <ul>
+    <li><span class="nav-label"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="routerLink" (click)="open()">Главная</a></span></li>
+    <li><span class="nav-label"><a routerLink="/digital-marketingovoe-agentstvo" routerLinkActive="active" class="routerLink" (click)="open()">О нас</a></span></li>
+    <li><span class="nav-label"><a routerLink="/marketingovie-uslugi" routerLinkActive="active" class="routerLink" (click)="open()">Услуги</a></span></li>
+    <li><span class="nav-label"><a routerLink="/portfolio" routerLinkActive="active" class="routerLink" (click)="open()">Портфолио</a></span></li>
+    <li><span class="nav-label"><a routerLink="/contacts" routerLinkActive="active" class="routerLink" (click)="open()">Контакты</a></span></li>
+    <li><span class="nav-label"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="routerLink" (click)="open()">Блог</a></span></li>
+  </ul>
+</nav>
+
+<main [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+

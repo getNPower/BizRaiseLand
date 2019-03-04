@@ -1,0 +1,55 @@
+ngx-slick-carousel{
+  margin-bottom: 20px;
+}
+h2{
+  font-size: 36px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  margin-top: 40px;
+  color: #000000;
+}
+.slide-holder{
+  position: relative;
+  cursor: pointer;
+  img{
+    opacity: 0.6;
+  }
+  &:hover{
+    .carousel-text_title{
+      color: #993399;
+    }
+    img{
+      opacity: 0.15;
+      box-shadow: -5px 5px 20px 0 rgba(153, 51, 153, 1.0);
+      transition: 0.5s all ease;
+    }
+  }
+  .carousel-text_title{
+    top: 40%;
+    left: 20%;
+    position: absolute;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    max-width: 60%;
+    font-size: 24px;
+  }
+}
+
+/*
+.backgroundHolderHover{
+  cursor: pointer;
+  opacity: 0.6;
+  // background-size: 100% 100%;
+}
+&:hover{
+  .backgroundHolderHover{
+    opacity: 0.15;
+    box-shadow: -5px 5px 20px 0 rgba(153, 51, 153, 1.0);
+    transition: 0.5s all ease;
+  }
+  .text-flow_title{
+    color: #993399;
+  }
+}
+*/

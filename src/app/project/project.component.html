@@ -1,0 +1,38 @@
+<div class="wrapper-global">
+  <div class="wrapper-content">
+    <div class="korb section services">
+  <div class="negative-margins">
+    <div class="container container-paddings">
+      <div class="col-sm-12 col-md-12">
+        <h1 class="title left-padding">{{itemOutput['title']}}</h1>
+      </div>
+      <div class="clearfix"></div>
+      <div class="sticky left-side">
+        <h1 class="heading">Проэкт</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="project-description col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div [innerHTML]="itemOutput['description']"></div>
+            <div class="block-parent">
+              <a routerLink="/portfolio" routerLinkActive="active" class="block-parent__link"><img src="../../assets/img/arrow_soft_top.png">Назад к проектам</a>
+            </div>
+          </div>
+          <div class="project-content col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="project-content_item"
+                 snInViewport
+                 *ngFor="let item of itemOutput['portfolio']"
+            >
+              <img src="../../assets/img/portfolio/{{item}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="wrapper-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

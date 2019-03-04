@@ -1,0 +1,45 @@
+<div class="wrapper-global">
+    <div class="wrapper-content">
+        <div id="korb" class="korb section services">
+              <div class="negative-margins">
+                <div class="container container-paddings">
+                  <div class="col-sm-12 col-md-12">
+                    <h1 class="title left-padding">Портфолио</h1>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="sticky left-side">
+                    <h1 class="heading">Портфолио</h1>
+                  </div>
+                  <div class="row">
+
+                      <div class="portfolio-filter-holder col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                          <p class="portfolio-filter-paragraph col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsa laboriosam reiciendis. A commodi dolorum excepturi harum iste, labore libero nisi optio quas </p>
+                        <a class="col-xs-12 filter-item"
+                           *ngFor="let filter of filteritems;let i=index"
+                           (click)="sort(filter);toggle=i" [class.active]="toggle==i">
+                            {{filter}}
+                        </a>
+                      </div>
+                      <div class="portfolio-content-holder col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <div class="text-flow col-xs-12"
+                             snInViewport
+                             *ngFor="let item of sortitems;let j=index"
+                             [routerLink]="['/portfolio/project', item['id']]"
+                        >
+                          <div class="background-holder backgroundHolderHover" [style.backgroundImage]="'url(../../assets/img/'+ item['img'] +')'"></div>
+                          <h3 class="text-flow_title">{{item['title']}}</h3>
+                          <!--<p>{{item['description']}}</p>-->
+                        </div>
+                        <span class="portfolio-arrow-up" snInViewport (click)="scrollTop()" ><img src="../../assets/img/arrow_soft_top.png"></span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+    </div>
+
+    <div class="wrapper-footer">
+        <app-footer></app-footer>
+    </div>
+</div>

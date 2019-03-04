@@ -1,0 +1,286 @@
+
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+.nav-logo {
+  position: absolute;
+  left:30px;
+  border-radius: 26px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 200;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.nav-logo img{
+  max-width: 50%;
+}
+.nav-logo p{
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-trigger {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  right: 30px;
+  border-radius: 26px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 200;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+
+}
+@media (max-width: 1200px){
+  .nav-trigger {
+    right: 1vw;
+    top: 1vh;
+  }
+}
+.nav-trigger.open {
+  background: #000000;
+}
+
+.nav-trigger.navclose {
+  background: transparent;
+}
+
+#nav-trigger .navline {
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 2px;
+  background: #fff;
+  left: 15px;
+  -webkit-transform-origin: 0px 4px;
+  -moz-transform-origin: 0px 4px;
+  -ms-transform-origin: 0px 4px;
+  -o-transform-origin: 0px 4px;
+  transform-origin: 0px 4px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+#nav-trigger  .navline:nth-child(1) {
+  top: 20px;
+}
+
+#nav-trigger  .navline:nth-child(2) {
+  top: 25px;
+  width: 20px;
+  left: 18px;
+}
+
+#nav-trigger  .navline:nth-child(3) {
+  top: 30px;
+  width: 23px;
+  left: 15px;
+}
+
+#nav-trigger.navclose .navline:nth-child(1) {
+  -webkit-transform: translateX(11px) rotate(45deg);
+  -moz-transform: translateX(11px) rotate(45deg);
+  -ms-transform: translateX(11px) rotate(45deg);
+  -o-transform: translateX(11px) rotate(45deg);
+  transform: translateX(11px) rotate(45deg);
+  top: 16px;
+  left: 5.5px;
+}
+
+#nav-trigger.navclose .navline:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-trigger.navclose .navline:nth-child(3) {
+  -webkit-transform: translateX(11px) rotate(-45deg);
+  -moz-transform: translateX(11px) rotate(-45deg);
+  -ms-transform: translateX(11px) rotate(-45deg);
+  -o-transform: translateX(11px) rotate(-45deg);
+  transform: translateX(11px) rotate(-45deg);
+  top: 32px;
+  left: 10px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+}
+
+nav.out {
+  pointer-events: none;
+  height: 100%;
+}
+
+nav.in {
+  pointer-events: auto;
+}
+
+nav ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+nav li {
+  height: 20%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-weight: 800;
+  font-family: Montserrat, sans-serif !important;
+}
+
+nav li:hover {
+  color: #993399;
+}
+
+nav.in li:nth-child(1) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(4) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(5) {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.out li:nth-child(5) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(4) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(1) {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li {
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
+  transform: translateX(300%);
+  opacity: 0;
+}
+
+nav.in li {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav-label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  text-transform: uppercase;
+
+}
+.header {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  top: 0px;
+}
+
+.header h1 {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  font-family: "Patua One", cursive;
+  text-align: center;
+  display: block;
+  top: 50%;
+}
+
+.content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#nav a[_ngcontent-c0] , #nav a[_ngcontent-c0]:visited, #nav a[_ngcontent-c0]:link {
+  color: #fff;
+  font-weight: 800;
+  font-family: Montserrat, sans-serif !important;
+  border: none;
+  text-decoration: none;
+}
+
+#nav a[_ngcontent-c0]:hover{
+  color: #993399;
+}

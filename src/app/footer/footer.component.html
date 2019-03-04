@@ -1,0 +1,133 @@
+<footer class="b-footer">
+  <div class="footer-menu">
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <ul class="footer-link">
+        <li class="footer-link__item b-element__left"><a href="#" data-toggle="modal" data-target="#privacyPolicy">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <ul class="footer-link">
+        <li class="footer-link__item"><a href="#" data-toggle="modal" data-target="#denialResponsibility">Отказ от ответственности</a></li>
+      </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <ul class="footer-sociallink">
+        <li class="footer-sociallink__item"><a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li class="footer-sociallink__item"><a href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
+        <li class="footer-sociallink__item"><a href="#" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <!-- The Modal -->
+  <div class="modal" id="orderForm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Заказать</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="b-modal__formContainer">
+            <form class="cta_form visuallyhiddenForm hidden-block form_simple b-modal__form">
+              <div class="col-xs-12 col-sm-12 col-md-4 contentForm">
+            <span class="wpcf7-form-control-wrap your-name">
+              <input type="text"
+                     name="name"
+                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid cta_form__input"
+                     aria-required="true"
+                     aria-invalid="true"
+                     placeholder="Ваше имя"
+                     [ngClass]="{'formError': nameError}"
+                     [readonly]="ajaxService.done"
+                     [(ngModel)]="formData.name">
+              <div class="inputMessageName"></div>
+            </span>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+            <span class="wpcf7-form-control-wrap your-name">
+              <input type="text"
+                     name="phone"
+                     placeholder="Ваш телефон"
+                     class=" cta_form__input"
+                     [ngClass]="{'formError': phoneError}"
+                     [readonly]="ajaxService.done"
+                     [(ngModel)]="formData.phone">
+                 <div class="inputMessagePhone"></div>
+            </span>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <div class="submitContactForm">
+                  <button type="submit"
+                          class="sendMessage order-button"
+                          (click)="submit()"
+                          [disabled]="ajaxService.done"
+                  >
+                    {{ ajaxService.done == true ? 'Отправленно' : 'Отправить' }}
+                  </button>
+                </div>
+              </div>
+              <div class="w-clearfix"></div>
+              <div class="col-md-12">
+                <div class="messageOk"></div>
+              </div>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="privacyPolicy">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Политика конфиденциальности</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea itaque maxime saepe ullam velit voluptate? Assumenda dicta inventore non nostrum quam? Animi at eveniet fugiat harum laborum nam nemo, nesciunt repellat repudiandae similique tempora voluptate. Aliquid architecto debitis distinctio itaque iusto necessitatibus omnis perferendis quidem quis sapiente similique sit sunt tenetur ut, veritatis vero voluptates! Alias aperiam dicta dolor dolores, eaque, earum enim eos explicabo fugiat ipsum libero magni minus molestias mollitia nam neque nostrum officia omnis quam quas quia quisquam rerum suscipit temporibus ullam velit veniam? Aliquam rem repellat sequi. Accusantium doloremque eum illum laborum minus molestias officia quasi.
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="denialResponsibility">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Отказ от ответственности</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea itaque maxime saepe ullam velit voluptate? Assumenda dicta inventore non nostrum quam? Animi at eveniet fugiat harum laborum nam nemo, nesciunt repellat repudiandae similique tempora voluptate. Aliquid architecto debitis distinctio itaque iusto necessitatibus omnis perferendis quidem quis sapiente similique sit sunt tenetur ut, veritatis vero voluptates! Alias aperiam dicta dolor dolores, eaque, earum enim eos explicabo fugiat ipsum libero magni minus molestias mollitia nam neque nostrum officia omnis quam quas quia quisquam rerum suscipit temporibus ullam velit veniam? Aliquam rem repellat sequi. Accusantium doloremque eum illum laborum minus molestias officia quasi.
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>

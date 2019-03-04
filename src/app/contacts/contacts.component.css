@@ -1,0 +1,10 @@
+.page-block {
+  background-color: darkslategray;
+  max-width: 100%;
+  height: 100vh;
+  padding: 10px 30px; }
+  .page-block .page-block__header {
+    font-size: 38px;
+    text-align: center; }
+
+/*# sourceMappingURL=contacts.component.css.map */

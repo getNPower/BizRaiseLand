@@ -1,0 +1,10 @@
+<h2 class="title">Примеры работ</h2>
+<ngx-slick-carousel class="carousel"
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig">
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide slide-holder" [routerLink]="['/portfolio/project', slide.id]">
+    <img src="../../assets/img/{{ slide.img }}" alt="" width="100%">
+    <h3 class="carousel-text_title">{{ slide.title }}</h3>
+  </div>
+</ngx-slick-carousel>
+

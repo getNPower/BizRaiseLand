@@ -1,0 +1,37 @@
+<div class="wrapper-global">
+  <div class="wrapper-content">
+  <div *ngIf="currentService == 'autsorsing-marketinga'">
+    <app-service-autsorsing></app-service-autsorsing>
+  </div>
+  <div *ngIf="currentService == 'digital-strategiya'">
+    <app-service-strategiya></app-service-strategiya>
+  </div>
+  <div *ngIf="currentService == 'branding'">
+    <app-service-branding></app-service-branding>
+  </div>
+  <div *ngIf="currentService == 'raskrutka-sajtov'">
+    <app-service-raskrutka></app-service-raskrutka>
+  </div>
+  <div *ngIf="currentService == 'kontekstnaya-reklama'">
+    <app-service-kontekst></app-service-kontekst>
+  </div>
+  <div *ngIf="currentService == 'vnedrenie-crm-bitrix24'">
+    <app-service-bitrix24></app-service-bitrix24>
+  </div>
+  <div *ngIf="currentService == 'sozdanie-sajtov'">
+    <app-service-sitecreation></app-service-sitecreation>
+  </div>
+  <div *ngIf="currentService == 'sozdanie-videorolikov'">
+    <app-service-videocreation></app-service-videocreation>
+  </div>
+  <div>
+    <app-service-slider [imageCategory]="currentService"></app-service-slider>
+  </div>
+    <div class="block-parent">
+      <a routerLink="/marketingovie-uslugi" routerLinkActive="active" class="block-parent__link"><img src="../../assets/img/arrow_soft_top.png">Назад к услугам</a>
+    </div>
+  </div>
+  <div class="wrapper-footer">
+    <app-footer></app-footer>
+  </div>
+</div>
